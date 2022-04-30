@@ -14,10 +14,15 @@ Go to template folder:
 dotnet new --uninstall .
 ```
 
-## Bullseye Build
+## Bullseye Build Template
+Create tasks for your solution in .Net using [Bullseye](https://github.com/adamralph/bullseye) and [SimpleExec](https://github.com/adamralph/simple-exec)
 
-Create tasks for your soluntion in .Net
+### Install template
 
+```shell 
+dotnet new bullseyebuild
+```
+### Help:
 ```shell 
 ./build --help
 ```
