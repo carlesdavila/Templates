@@ -3,7 +3,7 @@
     "author": "Carlos Davila",
     "classifications": [ "Common", "Console" ],
     "identity": "Build.Bullseye.SimpleExec",
-    "name": "Simple Tasks in .NET with Bullseye",
+    "name": "Simple Tasks in .NET with Bullseye and SimpleExec",
     "shortName": "bullseyebuild",
     "tags": {
         "language": "C#",
@@ -18,7 +18,8 @@
                         ".idea/**",
                         ".git/**",
                         "obj/**",
-                        "bin/**"
+                        "bin/**",
+                        "build/.idea/**"
                     ]
                 }
             ]

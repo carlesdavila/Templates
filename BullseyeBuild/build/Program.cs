@@ -1,4 +1,6 @@
-﻿using static Bullseye.Targets;
+﻿using System;
+using System.IO;
+using static Bullseye.Targets;
 using static SimpleExec.Command;
 
 const string artifactsDir = "artifacts";
@@ -28,7 +30,12 @@ Target(Targets.RunTests, DependsOn(Targets.Build), async () =>
     await RunAsync("dotnet", "test -c Release --no-build --nologo");
 });
 
-Target(Targets.PublishArtifacts, () => Console.WriteLine("publish artifacts"));
+Target(Targets.GenerateArtifacts, DependsOn(Targets.CleanArtifactsOutput), async () =>
+{
+    await RunAsync("dotnet", $"pack -c Release -o {Directory.CreateDirectory(artifactsDir).FullName} --no-build --nologo");
+});
+
+Target(Targets.PublishArtifacts, DependsOn(Targets.GenerateArtifacts), () => Console.WriteLine("publish artifacts"));
 
 Target("default", DependsOn(Targets.RunTests, Targets.PublishArtifacts));
 
@@ -43,5 +50,6 @@ internal static class Targets
     public const string Build = "build";
     public const string RunTests = "run-tests";
 
+    public const string GenerateArtifacts = "generate-artifacts";
     public const string PublishArtifacts = "publish-artifacts";
 }
