@@ -1,6 +1,5 @@
 # Templates
-
-![Nuget](https://img.shields.io/nuget/v/BullseyeBuild.Template)
+_[![NuGet version](https://img.shields.io/nuget/v/BullseyeBuild.Template)](https://www.nuget.org/packages/BullseyeBuild.Template)_
 
 dotnet templates
 
