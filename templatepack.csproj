@@ -8,6 +8,8 @@
         <Authors>Carles Davila</Authors>
         <Description>Create tasks for your solution in .Net using Bullseye and SimpleExec</Description>
         <PackageTags>dotnet-new;templates;</PackageTags>
+        <ProjectUrl>https://github.com/carlesdavila/Templates</ProjectUrl>
+        <RepositoryUrl>https://github.com/carlesdavila/Templates</RepositoryUrl>
 
         <TargetFramework>net6.0</TargetFramework>
 

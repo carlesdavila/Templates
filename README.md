@@ -1,4 +1,7 @@
 # Templates
+
+![Nuget](https://img.shields.io/nuget/v/BullseyeBuild.Template)
+
 dotnet templates
 
 ### Install template
