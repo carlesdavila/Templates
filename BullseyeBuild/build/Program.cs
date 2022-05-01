@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using static Bullseye.Targets;
+﻿using static Bullseye.Targets;
 using static SimpleExec.Command;
 
 const string artifactsDir = "artifacts";
