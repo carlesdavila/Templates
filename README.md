@@ -1,7 +1,10 @@
 # Templates
+
+![Templates](logo.png)
+
 _[![NuGet version](https://img.shields.io/nuget/v/BullseyeBuild.Template)](https://www.nuget.org/packages/BullseyeBuild.Template)_
 
-dotnet templates
+Dotnet templates collection
 
 ### Install template
 
@@ -64,3 +67,7 @@ run-tests
 Open `build.csproj` with you favorite IDE and debug as usual
 
 > You have to change  `Working Directory` and `Program arguments` in the configuration to Debug
+
+---
+
+<sub>[Temple](https://thenounproject.com/icon/temple-2623300/) by [Xinh Studio](https://thenounproject.com/xinhstudio/) from [the Noun Project](https://thenounproject.com/) </sub>
