@@ -8,9 +8,9 @@
         <Authors>Carles Davila</Authors>
         <Description>Create tasks for your solution in .Net using Bullseye and SimpleExec</Description>
         <PackageTags>dotnet-new;templates;</PackageTags>
-        <ProjectUrl>https://github.com/carlesdavila/Templates</ProjectUrl>
+        <PackageProjectUrl>https://github.com/carlesdavila/Templates</PackageProjectUrl>
         <RepositoryUrl>https://github.com/carlesdavila/Templates</RepositoryUrl>
-        <PackageIconUrl>https://raw.githubusercontent.com/carlesdavila/Templates/master/logo.png</PackageIconUrl>
+        <PackageIcon>logo.png</PackageIcon>
 
         <TargetFramework>net6.0</TargetFramework>
 
@@ -30,6 +30,7 @@
     <ItemGroup>
         <Content Include="BullseyeBuild\**\*" Exclude="BullseyeBuild\**\bin\**;BullseyeBuild\**\obj\**" />
         <Compile Remove="**\*" />
+        <None Include="logo.png" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
 
     <ItemGroup>
