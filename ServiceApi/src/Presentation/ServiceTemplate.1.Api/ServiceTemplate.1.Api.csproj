@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ServiceTemplate._1.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\ServiceTemplate.1.Application\ServiceTemplate.1.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ServiceTemplate.1.Infrastructure\ServiceTemplate.1.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ServiceTemplate.1.Persistence\ServiceTemplate.1.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

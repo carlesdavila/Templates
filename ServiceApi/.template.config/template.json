@@ -1,10 +1,13 @@
 {
     "$schema": "http://json.schemastore.org/template",
     "author": "Carles Davila",
-    "classifications": [ "Common", "Console" ],
-    "identity": "Build.Bullseye.SimpleExec",
-    "name": "Simple Tasks in .NET with Bullseye and SimpleExec",
-    "shortName": "bullseyebuild",
+    "classifications": [
+        "Web/ASP.NET"
+    ],
+    "identity": "Service.Api",
+    "name": "Service Api",
+    "shortName": "serviceapi",
+    "sourceName": "ServiceTemplate.1",
     "tags": {
         "language": "C#",
         "type": "project"
