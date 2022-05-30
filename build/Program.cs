@@ -11,9 +11,19 @@ Target(Targets.CleanArtifactsOutput, () =>
 
 });
 
-Target(Targets.GenerateArtifacts, DependsOn(Targets.CleanArtifactsOutput), async () => { await RunAsync("dotnet", $"pack -o {Directory.CreateDirectory(artifactsDir).FullName} --nologo"); });
+Target(Targets.PackBullseyeBuild, DependsOn(Targets.CleanArtifactsOutput), async () =>
+{
+    await RunAsync("dotnet", $"pack BullseyeBuildPack.csproj -o {Directory.CreateDirectory(artifactsDir).FullName} --nologo");
+});
 
-Target(Targets.RunTests, DependsOn(Targets.GenerateArtifacts), async () =>
+Target(Targets.PackServiceApi, DependsOn(Targets.CleanArtifactsOutput), async () =>
+{
+    await RunAsync("dotnet", $"pack ServiceApiPack.csproj -o {Directory.CreateDirectory(artifactsDir).FullName} --nologo");
+});
+
+Target(Targets.Pack, DependsOn(Targets.PackServiceApi, Targets.PackBullseyeBuild));
+
+Target(Targets.RunTests, DependsOn(Targets.Pack), async () =>
 {
     // Uninstall BullseyeBuild.Template
     await RunAsync("dotnet", "new --uninstall BullseyeBuild.Template");
@@ -35,6 +45,8 @@ await RunTargetsAndExitAsync(args);
 internal static class Targets
 {
     public const string CleanArtifactsOutput = "clean-artifacts-output";
-    public const string GenerateArtifacts = "generate-artifacts";
+    public const string PackServiceApi = "pack-serviceapi";
+    public const string PackBullseyeBuild = "pack-bullseyebuild";
+    public const string Pack = "pack";
     public const string RunTests = "run-tests";
 }

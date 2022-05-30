@@ -3,10 +3,10 @@
     <PropertyGroup>
         <PackageType>Template</PackageType>
         <PackageVersion>1.0</PackageVersion>
-        <PackageId>BullseyeBuild.Template</PackageId>
-        <Title>BullseyeBuild Template</Title>
+        <PackageId>ServiceApi.Template</PackageId>
+        <Title>ServiceApi Template</Title>
         <Authors>Carles Davila</Authors>
-        <Description>Create tasks for your solution in .Net using Bullseye and SimpleExec</Description>
+        <Description>Another Service Api template with Clean Arquitecture</Description>
         <PackageTags>dotnet-new;templates;</PackageTags>
         <PackageProjectUrl>https://github.com/carlesdavila/Templates</PackageProjectUrl>
         <RepositoryUrl>https://github.com/carlesdavila/Templates</RepositoryUrl>
@@ -28,7 +28,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="BullseyeBuild\**\*" Exclude="BullseyeBuild\**\bin\**;BullseyeBuild\**\obj\**" />
+        <Content Include="ServiceApi\**\*" Exclude="ServiceApi\**\bin\**;ServiceApi\**\obj\**" />
         <Compile Remove="**\*" />
         <None Include="logo.png" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
