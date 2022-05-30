@@ -5,7 +5,7 @@
 namespace ServiceTemplate._1.Api.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]")]
 public class UserController : ControllerBase
 {
     public record NewUser(string Name);

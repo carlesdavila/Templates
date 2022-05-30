@@ -3,8 +3,10 @@ using ServiceTemplate._1.Api.Configuration.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Configure Logging
+builder.Logging.SetupSerilog(builder.Configuration);
 
+// Add services to the container.
 builder.Services.ConfigureServices();
 
 var app = builder.Build();
@@ -13,7 +15,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseCustomSwagger();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseAuthorization();

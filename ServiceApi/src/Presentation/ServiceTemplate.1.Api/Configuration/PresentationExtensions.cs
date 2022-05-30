@@ -1,4 +1,5 @@
-﻿using ServiceTemplate._1.Application.Configuration;
+﻿using ServiceTemplate._1.Api.Configuration.Extensions;
+using ServiceTemplate._1.Application.Configuration;
 using ServiceTemplate._1.Infrastructure.Configuration;
 using ServiceTemplate._1.Persistence.Configuration;
 
@@ -17,9 +18,8 @@ public static class PresentationExtensions
     internal static void AddPresentation(this IServiceCollection services)
     {
         services.AddControllers();
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-        services.AddEndpointsApiExplorer();
-        services.AddSwaggerGen();
+        
+        services.AddOpenApi();
     }
 
 }
