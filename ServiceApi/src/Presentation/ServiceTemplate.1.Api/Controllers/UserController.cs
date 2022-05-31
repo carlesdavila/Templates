@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ApplicationFramework.Presentation.Web;
+using Microsoft.AspNetCore.Mvc;
+using ServiceTemplate._1.Application.Users.Commands.CreateUser;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -6,7 +8,7 @@ namespace ServiceTemplate._1.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class UserController : ControllerBase
+public class UserController : ApiControllerBase
 {
     public record NewUser(string Name);
     public record UpdateUser(string Name);
@@ -27,8 +29,11 @@ public class UserController : ControllerBase
 
     // POST api/<UserController>
     [HttpPost]
-    public void Post([FromBody] NewUser newUser)
+    public async Task<CreatedResult> Post([FromBody] NewUser newUser)
     {
+        var command = new CreateUserCommand(){Name = newUser.Name};
+        
+        return Created(string.Empty, await Mediator.Send(command));
     }
 
     // PUT api/<UserController>/5

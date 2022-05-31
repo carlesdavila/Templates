@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\ApplicationFramework\ApplicationFramework.Presentation\ApplicationFramework.Presentation.csproj" />
     <ProjectReference Include="..\..\Application\ServiceTemplate.1.Application\ServiceTemplate.1.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\ServiceTemplate.1.Infrastructure\ServiceTemplate.1.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\ServiceTemplate.1.Persistence\ServiceTemplate.1.Persistence.csproj" />
