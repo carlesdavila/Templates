@@ -27,11 +27,9 @@ public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TReque
                 .Where(r => r.Errors.Any())
                 .SelectMany(r => r.Errors)
                 .ToList();
-
-            var firstFailure = failures.FirstOrDefault();
             
-            if (firstFailure is not null)
-                throw new Exceptions.ValidationException(firstFailure.ErrorMessage, firstFailure.ErrorCode);
+            if (failures.Any())
+                throw new Exceptions.ValidationException(failures);
         }
         return await next();
     }

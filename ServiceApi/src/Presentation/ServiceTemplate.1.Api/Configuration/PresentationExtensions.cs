@@ -1,4 +1,6 @@
-﻿using ServiceTemplate._1.Api.Configuration.Extensions;
+﻿using ApplicationFramework.Presentation.Filters;
+using FluentValidation.AspNetCore;
+using ServiceTemplate._1.Api.Configuration.Extensions;
 using ServiceTemplate._1.Application.Configuration;
 using ServiceTemplate._1.Infrastructure.Configuration;
 using ServiceTemplate._1.Persistence.Configuration;
@@ -17,8 +19,8 @@ public static class PresentationExtensions
 
     internal static void AddPresentation(this IServiceCollection services)
     {
-        services.AddControllers();
-        
+        services.AddControllers().AddApplicationFramework();
+
         services.AddOpenApi();
     }
 

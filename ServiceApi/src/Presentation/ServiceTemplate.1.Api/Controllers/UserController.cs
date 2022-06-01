@@ -10,41 +10,41 @@ namespace ServiceTemplate._1.Api.Controllers;
 [Route("[controller]")]
 public class UserController : ApiControllerBase
 {
-    public record NewUser(string Name);
-    public record UpdateUser(string Name);
+    public record NewUser(string Name, string Email);
+    public record UpdatedUser(string Name);
 
     // GET: api/<UserController>
     [HttpGet]
-    public IEnumerable<string> Get()
+    public IEnumerable<string> GetAll()
     {
         return new string[] { "value1", "value2" };
     }
 
     // GET api/<UserController>/5
     [HttpGet("{id}")]
-    public string Get(int id)
+    public string GetUser(int id)
     {
         return "value";
     }
 
     // POST api/<UserController>
     [HttpPost]
-    public async Task<CreatedResult> Post([FromBody] NewUser newUser)
+    public async Task<CreatedResult> CreateUser([FromBody] NewUser newUser)
     {
-        var command = new CreateUserCommand(){Name = newUser.Name};
+        var command = new CreateUserCommand(){Name = newUser.Name, Email = newUser.Email};
         
         return Created(string.Empty, await Mediator.Send(command));
     }
 
     // PUT api/<UserController>/5
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] UpdateUser value)
+    public void UpdateUser(int id, [FromBody] UpdatedUser value)
     {
     }
 
     // DELETE api/<UserController>/5
     [HttpDelete("{id}")]
-    public void Delete(int id)
+    public void DeleteUser(int id)
     {
     }
 }

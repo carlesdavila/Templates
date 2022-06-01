@@ -2,10 +2,7 @@
 
 public class ApplicationException : Exception
 {
-    protected ApplicationException(string businessMessage, string code) : base(businessMessage)
+    protected ApplicationException(string businessMessage) : base(businessMessage)
     {
-        Code = code;
     }
-    public string? Code { get; }
-    
 }

@@ -2,7 +2,7 @@
 
 public class NotAllowedException : ApplicationException
 {
-    protected NotAllowedException(string businessMessage, string code = "NotAllowedException") : base(businessMessage, code)
+    protected NotAllowedException(string businessMessage) : base(businessMessage)
     {
     }
 }
