@@ -5,7 +5,7 @@ namespace Microsoft.Extensions.DependencyInjection;
 
 public static class MvcBuilderExtensions
 {
-    public static IMvcBuilder AddApplicationFramework(this IMvcBuilder mvcBuilder )
+    public static IMvcBuilder WithApplicationFrameworkConfiguration(this IMvcBuilder mvcBuilder )
     {
         return mvcBuilder.AddMvcOptions(options => options.Filters.Add<ApiExceptionFilterAttribute>())
             .AddFluentValidation(fv =>
