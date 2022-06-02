@@ -15,7 +15,7 @@ public class UserController : ApiControllerBase
     /// </summary>
     /// <returns> List of users </returns>
     [HttpGet]
-    public async Task<ActionResult<IList<UserModel>>> GetAll()
+    public async Task<ActionResult<List<UserModel>>> GetAll()
     {
         var getUsersQuery = new GetUsersQuery();
 
@@ -57,7 +57,7 @@ public class UserController : ApiControllerBase
     /// <param name="id"> The id of the user </param>
     /// <param name="value"> The user to update </param>
     [HttpPut("{id}")]
-    public async Task<ActionResult> Update(int id, [FromBody] UpdatedUser value)
+    public async Task<ActionResult> Update(Guid id, [FromBody] UpdatedUser value)
     {
         var updateUserCommand = new UpdateUserCommand();
 

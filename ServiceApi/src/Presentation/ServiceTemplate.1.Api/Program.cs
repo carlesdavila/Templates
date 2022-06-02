@@ -1,5 +1,9 @@
+using ApplicationFramework.Presentation.Web;
+using Microsoft.AspNetCore.Mvc;
 using ServiceTemplate._1.Api.Configuration;
 using ServiceTemplate._1.Api.Configuration.Extensions;
+
+[assembly: ApiConventionType(typeof(ApiConventions))]
 
 var builder = WebApplication.CreateBuilder(args);
 
