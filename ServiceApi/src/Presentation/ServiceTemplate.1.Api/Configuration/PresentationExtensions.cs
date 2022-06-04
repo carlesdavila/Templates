@@ -7,12 +7,12 @@ namespace ServiceTemplate._1.Api.Configuration;
 
 public static class PresentationExtensions
 {
-    public static void ConfigureServices(this IServiceCollection services)
+    public static void ConfigureServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddPresentation();
         services.AddApplication();
         services.AddInfrastructure();
-        services.AddPersistence();
+        services.AddPersistence(configuration);
     }
 
     internal static void AddPresentation(this IServiceCollection services)

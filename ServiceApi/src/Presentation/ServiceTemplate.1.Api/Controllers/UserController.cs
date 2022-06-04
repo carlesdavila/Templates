@@ -1,5 +1,6 @@
 ﻿using ApplicationFramework.Presentation.Web;
 using Microsoft.AspNetCore.Mvc;
+using ServiceTemplate._1.Api.Models;
 using ServiceTemplate._1.Application.Users.Commands.CreateUser;
 using ServiceTemplate._1.Application.Users.Commands.DeleteUser;
 using ServiceTemplate._1.Application.Users.Commands.UpdateUser;
@@ -46,7 +47,19 @@ public class UserController : ApiControllerBase
     [HttpPost]
     public async Task<CreatedResult> Create([FromBody] NewUser newUser)
     {
-        var command = new CreateUserCommand { Name = newUser.Name, Email = newUser.Email };
+        var command = new CreateUserCommand
+        {
+            Name = newUser.Name,
+            Email = newUser.Email,
+            Address = new CreateUserAddress()
+            {
+                Street = newUser.Address.Street,
+                City = newUser.Address.City,
+                State = newUser.Address.State,
+                Country = newUser.Address.Country,
+                ZipCode = newUser.Address.ZipCode
+            }
+        };
 
         return Created(string.Empty, await Mediator.Send(command));
     }
@@ -55,11 +68,16 @@ public class UserController : ApiControllerBase
     ///     Update user
     /// </summary>
     /// <param name="id"> The id of the user </param>
-    /// <param name="value"> The user to update </param>
+    /// <param name="updateUser"> The user to update </param>
     [HttpPut("{id}")]
-    public async Task<ActionResult> Update(Guid id, [FromBody] UpdatedUser value)
+    public async Task<ActionResult> Update(Guid id, [FromBody] UpdateUser updateUser)
     {
-        var updateUserCommand = new UpdateUserCommand();
+        var updateUserCommand = new UpdateUserCommand()
+        {
+            Id = id,
+            Name = updateUser.Name,
+            Email = updateUser.Email
+        };
 
         await Mediator.Send(updateUserCommand);
         
@@ -82,8 +100,4 @@ public class UserController : ApiControllerBase
 
         return Ok();
     }
-
-    public record NewUser(string Name, string Email);
-
-    public record UpdatedUser(string Name, string Email);
 }

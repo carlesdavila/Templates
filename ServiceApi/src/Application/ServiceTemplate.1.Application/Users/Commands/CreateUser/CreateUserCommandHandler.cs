@@ -17,7 +17,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
     public async Task<Guid> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
         var newAddress = new Address(request.Address.Street, request.Address.City, request.Address.State, request.Address.Country, request.Address.ZipCode);
-        var newUser = new User(request.Name!, newAddress);
+        var newUser = new User(request.Name!, request.Email!, newAddress);
 
         _dbContext.Users.Add(newUser);
 

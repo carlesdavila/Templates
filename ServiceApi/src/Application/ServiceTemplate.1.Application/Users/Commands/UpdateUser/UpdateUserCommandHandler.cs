@@ -17,7 +17,7 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
     {
         var userToUpdate = await _dbContext.Users.FirstAsync(x => x.Id == request.Id, cancellationToken);
 
-        userToUpdate.Update(request.Name!);
+        userToUpdate.Update(request.Name!, request.Email!);
         
         await _dbContext.SaveChangesAsync(cancellationToken);
         

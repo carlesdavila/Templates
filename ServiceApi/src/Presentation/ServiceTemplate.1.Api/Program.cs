@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Logging.SetupSerilog(builder.Configuration);
 
 // Add services to the container.
-builder.Services.ConfigureServices();
+builder.Services.ConfigureServices(builder.Configuration);
 
 var app = builder.Build();
 

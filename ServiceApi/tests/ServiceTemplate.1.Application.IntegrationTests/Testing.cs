@@ -34,7 +34,7 @@ public class Testing
             w.EnvironmentName == "Development" &&
             w.ApplicationName == "ServiceTemplate.1.Api"));
 
-        services.ConfigureServices();
+        services.ConfigureServices(_configuration);
 
         _scopeFactory = services.BuildServiceProvider().GetRequiredService<IServiceScopeFactory>();
 
