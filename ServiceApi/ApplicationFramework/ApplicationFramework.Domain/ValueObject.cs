@@ -1,24 +1,22 @@
 ﻿namespace ApplicationFramework.Domain;
 
-// Source: https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/implement-value-objects
 public abstract class ValueObject
 {
-    private static bool EqualOperator(ValueObject left, ValueObject right)
+    protected static bool EqualOperator(ValueObject left, ValueObject right)
     {
-        if (left is null ^ right is null)
+        if (ReferenceEquals(left, null) ^ ReferenceEquals(right, null))
         {
             return false;
         }
-
-        return left?.Equals(right) != false;
+        return ReferenceEquals(left, null) || left.Equals(right);
     }
 
     protected static bool NotEqualOperator(ValueObject left, ValueObject right)
     {
-        return !EqualOperator(left, right);
+        return !(EqualOperator(left, right));
     }
 
-    protected abstract IEnumerable<object> GetAtomicValues();
+    protected abstract IEnumerable<object> GetEqualityComponents();
 
     public override bool Equals(object obj)
     {
@@ -27,33 +25,16 @@ public abstract class ValueObject
             return false;
         }
 
-        var other = (ValueObject) obj;
-        // ReSharper disable GenericEnumeratorNotDisposed
-        var thisValues = GetAtomicValues().GetEnumerator();
-        var otherValues = other.GetAtomicValues().GetEnumerator();
-        // ReSharper restore GenericEnumeratorNotDisposed
+        var other = (ValueObject)obj;
 
-        while (thisValues.MoveNext() && otherValues.MoveNext())
-        {
-            if (thisValues.Current is null ^ otherValues.Current is null)
-            {
-                return false;
-            }
-
-            if (thisValues.Current != null &&
-                !thisValues.Current.Equals(otherValues.Current))
-            {
-                return false;
-            }
-        }
-
-        return !thisValues.MoveNext() && !otherValues.MoveNext();
+        return this.GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
     }
 
     public override int GetHashCode()
     {
-        return GetAtomicValues()
+        return GetEqualityComponents()
             .Select(x => x != null ? x.GetHashCode() : 0)
             .Aggregate((x, y) => x ^ y);
     }
+    // Other utility methods
 }
