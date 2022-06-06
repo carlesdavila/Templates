@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AppFramework.Application" Version="1.0.0-preview.4" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.0.2" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
@@ -15,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\ApplicationFramework\ApplicationFramework.Application\ApplicationFramework.Application.csproj" />
     <ProjectReference Include="..\..\Domain\ServiceTemplate.1.Domain\ServiceTemplate.1.Domain.csproj" />
   </ItemGroup>
 
