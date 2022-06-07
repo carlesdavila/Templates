@@ -95,7 +95,7 @@ public class $CLASS$ : ApiControllerBase&#xD;
     [HttpDelete("{id}")]&#xD;
     public async Task&lt;ActionResult&gt; Delete(Guid id)&#xD;
     {&#xD;
-        var deleteUserCommand = new Delete$ENTITYNAME$Command&#xD;
+        var delete$ENTITYNAME$Command = new Delete$ENTITYNAME$Command&#xD;
         {&#xD;
             Id = id&#xD;
         };&#xD;
