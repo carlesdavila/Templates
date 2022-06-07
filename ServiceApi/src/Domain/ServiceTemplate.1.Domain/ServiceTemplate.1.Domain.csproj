@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AppFramework.Domain" Version="1.0.0-preview.4" />
+    <PackageReference Include="AppFramework.Domain" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
