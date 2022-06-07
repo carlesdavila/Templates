@@ -23,6 +23,7 @@
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
 
+        <MinVerTagPrefix>build-</MinVerTagPrefix>
         <MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
         <MinVerAutoIncrement>minor</MinVerAutoIncrement>
     </PropertyGroup>
