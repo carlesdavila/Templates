@@ -20,7 +20,8 @@
         <NoWarn>$(NoWarn);NU5128</NoWarn>
         <NoDefaultExcludes>true</NoDefaultExcludes>
 
-        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
 
         <MinVerTagPrefix>build-</MinVerTagPrefix>
@@ -31,6 +32,8 @@
     <ItemGroup>
         <Content Include="BullseyeBuild\**\*" Exclude="BullseyeBuild\**\bin\**;BullseyeBuild\**\obj\**" />
         <Compile Remove="**\*" />
+        <None Include="BullseyeBuild\README.md" Pack="true" PackagePath="\" />
+
         <None Include="logo.png" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
 

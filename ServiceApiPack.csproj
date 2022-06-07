@@ -20,7 +20,8 @@
         <NoWarn>$(NoWarn);NU5128</NoWarn>
         <NoDefaultExcludes>true</NoDefaultExcludes>
 
-        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
 
         <MinVerTagPrefix>sapi-</MinVerTagPrefix>
@@ -31,6 +32,7 @@
     <ItemGroup>
         <Content Include="ServiceApi\**\*" Exclude="ServiceApi\**\bin\**;ServiceApi\**\obj\**" />
         <Compile Remove="**\*" />
+        <None Include="ServiceApi\README.md" Pack="true" PackagePath="\" />
         <None Include="logo.png" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
 

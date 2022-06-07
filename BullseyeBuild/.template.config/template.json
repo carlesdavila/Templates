@@ -19,7 +19,8 @@
                         ".git/**",
                         "obj/**",
                         "bin/**",
-                        "build/.idea/**"
+                        "build/.idea/**",
+                        "README.md"
                     ]
                 }
             ]

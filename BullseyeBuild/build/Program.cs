@@ -28,7 +28,7 @@ Target(Targets.RunTests, DependsOn(Targets.Build), async () =>
     await RunAsync("dotnet", "test -c Release --no-build --nologo");
 });
 
-Target(Targets.GenerateArtifacts, DependsOn(Targets.CleanArtifactsOutput, Targets.Build), async () =>
+Target(Targets.Pack, DependsOn(Targets.CleanArtifactsOutput, Targets.Build), async () =>
 {
     await RunAsync("dotnet", $"pack -c Release -o {Directory.CreateDirectory(artifactsDir).FullName} --no-build --nologo");
 });
@@ -48,6 +48,6 @@ internal static class Targets
     public const string Build = "build";
     public const string RunTests = "run-tests";
 
-    public const string GenerateArtifacts = "generate-artifacts";
+    public const string Pack = "pack";
     public const string PublishArtifacts = "publish-artifacts";
 }
