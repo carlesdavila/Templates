@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>ServiceTemplate._1.Application.IntegrationTests</RootNamespace>
+        <RootNamespace>ServiceTemplate._1.Application.UnitTests</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
