@@ -1,6 +1,4 @@
-﻿using ServiceTemplate._1.Domain.ValueObjects;
-
-namespace ServiceTemplate._1.Domain.Entities;
+﻿namespace ServiceTemplate._1.Domain.Entities;
 
 public class User : Entity
 {

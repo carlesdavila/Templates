@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="AppFramework.Domain" Version="1.0.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
   </ItemGroup>
 
 </Project>
