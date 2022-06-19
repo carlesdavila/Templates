@@ -1,4 +1,4 @@
-namespace ServiceTemplate._1.Integration.UnitTests;
+namespace ServiceTemplate._1.Infrastructure.UnitTests;
 
 public class Tests
 {

@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.EntityFrameworkCore;
 using ServiceTemplate._1.Application.Interfaces;
 using ServiceTemplate._1.Domain.Events;
 

@@ -6,7 +6,7 @@ internal static class HttpClientServicesExtensions
 {
     internal static IServiceCollection AddHttpClientServices(this IServiceCollection services)
     {
-        //services.AddHttpClient();
+        //services.AddHttpClient<IYourClient, YourClient>();
 
         return services;
     }

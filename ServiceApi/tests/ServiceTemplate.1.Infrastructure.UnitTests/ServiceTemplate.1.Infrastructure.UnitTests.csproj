@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>ServiceTemplate._1.Application.UnitTests</RootNamespace>
+        <RootNamespace>ServiceTemplate._1.Infrastructure.UnitTests</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
@@ -18,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Application\ServiceTemplate.1.Application\ServiceTemplate.1.Application.csproj" />
+      <ProjectReference Include="..\..\src\Infrastructure\ServiceTemplate.1.Infrastructure\ServiceTemplate.1.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

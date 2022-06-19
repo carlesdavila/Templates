@@ -8,5 +8,7 @@ public static class InfrastructureExtensions
     public static void AddInfrastructure(this IServiceCollection services)
     {
         services.AddHttpClientServices();
+        
+        //Register your Infrastructure services
     }
 }
