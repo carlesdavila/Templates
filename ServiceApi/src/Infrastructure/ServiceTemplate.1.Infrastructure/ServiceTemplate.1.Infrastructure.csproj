@@ -8,8 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AppFramework.Infrastructure" Version="1.0.0" />
+    <PackageReference Include="AppFramework.Infrastructure" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.10.0-alpha.21420.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\ServiceTemplate.1.Application\ServiceTemplate.1.Application.csproj" />
   </ItemGroup>
 
 </Project>

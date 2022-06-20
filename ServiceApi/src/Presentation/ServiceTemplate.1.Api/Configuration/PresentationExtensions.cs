@@ -11,7 +11,7 @@ public static class PresentationExtensions
     {
         services.AddPresentation();
         services.AddApplication();
-        services.AddInfrastructure();
+        services.AddInfrastructure(configuration);
         services.AddPersistence(configuration);
     }
 
