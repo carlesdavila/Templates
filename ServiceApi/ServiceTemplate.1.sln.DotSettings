@@ -39,11 +39,12 @@
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=NAMESPACE/Order/@EntryValue">0</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=varCommand/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=varCommand/Expression/@EntryValue">decapitalize(YourCommand)</s:String>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=varCommand/InitialRange/@EntryValue">-1</s:Int64>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=varCommand/Order/@EntryValue">3</s:Int64>
+	
+	
+	
+	
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=YourCommand/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=YourCommand/InitialRange/@EntryValue">4</s:Int64>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Field/=YourCommand/Order/@EntryValue">2</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22761BC69378FF4FAE0520561167EB13/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
@@ -53,32 +54,32 @@
 &#xD;
 public class $CLASSTESTS$&#xD;
 {&#xD;
-    private YourCommandHandler _$varCommand$Handler;&#xD;
+    private $YourCommand$Handler _$YourCommand$Handler;&#xD;
 &#xD;
     [SetUp]&#xD;
     public void Setup()&#xD;
     {&#xD;
-        _yourCommandHandler = new $YourCommand$Handler();&#xD;
+        _$YourCommand$Handler = new $YourCommand$Handler();&#xD;
     }&#xD;
 &#xD;
 	[TearDown]&#xD;
     public void TearDown()&#xD;
     {&#xD;
     }&#xD;
-&#xD;
+	$END$&#xD;
 	[Test]&#xD;
     public async Task Should()&#xD;
     {&#xD;
         // Arrange&#xD;
 		var fixture = new Fixture();&#xD;
         &#xD;
-		var command = Fixture.Create&lt;$YourCommand$&gt;()&#xD;
+		var command = Fixture.Create&lt;$YourCommand$&gt;();&#xD;
 &#xD;
         // Act&#xD;
-        var result = await _$varCommand$Handler.Handle(command, CancellationToken.None);&#xD;
+        var result = await _$YourCommand$Handler.Handle(command, CancellationToken.None);&#xD;
 &#xD;
         // Assert&#xD;
-        result.Should().NotBeNull()&#xD;
+        result.Should().NotBeNull();&#xD;
     }&#xD;
 &#xD;
 }</s:String>
@@ -96,12 +97,13 @@ public class $CLASSTESTS$&#xD;
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=NAMESPACE/Order/@EntryValue">0</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=varQuery/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=varQuery/Expression/@EntryValue">decapitalize(YourQuery)</s:String>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=varQuery/InitialRange/@EntryValue">-1</s:Int64>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=varQuery/Order/@EntryValue">2</s:Int64>
+	
+	
+	
+	
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=YourQuery/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=YourQuery/Order/@EntryValue">3</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=YourQuery/InitialRange/@EntryValue">4</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Field/=YourQuery/Order/@EntryValue">2</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=30FE8D6209121543BE4E12658A79D144/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
@@ -110,32 +112,32 @@ public class $CLASSTESTS$&#xD;
 &#xD;
 public class $CLASSTESTS$&#xD;
 {&#xD;
-    private YourCommandHandler _$varQuery$Handler;&#xD;
+    private $YourQuery$Handler _$YourQuery$Handler;&#xD;
 &#xD;
     [SetUp]&#xD;
     public void Setup()&#xD;
     {&#xD;
-        _yourCommandHandler = new $YourQuery$Handler();&#xD;
+        _$YourQuery$Handler = new $YourQuery$Handler();&#xD;
     }&#xD;
 &#xD;
 	[TearDown]&#xD;
     public void TearDown()&#xD;
     {&#xD;
     }&#xD;
-&#xD;
+	$END$&#xD;
 	[Test]&#xD;
     public async Task Should()&#xD;
     {&#xD;
         // Arrange&#xD;
 		var fixture = new Fixture();&#xD;
         &#xD;
-		var query = Fixture.Create&lt;$YourQuery$&gt;()&#xD;
+		var query = Fixture.Create&lt;$YourQuery$&gt;();&#xD;
 &#xD;
         // Act&#xD;
-        var result = await _$varQuery$Handler.Handle(query, CancellationToken.None);&#xD;
+        var result = await _$YourQuery$Handler.Handle(query, CancellationToken.None);&#xD;
 &#xD;
         // Assert&#xD;
-        result.Should().NotBeNull()&#xD;
+        result.Should().NotBeNull();&#xD;
     }&#xD;
 &#xD;
 }</s:String>
@@ -435,8 +437,8 @@ $END$&#xD;
 }</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EBE5AF63A3B44F4F940A517D7DB3A1B0/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EBE5AF63A3B44F4F940A517D7DB3A1B0/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EBE5AF63A3B44F4F940A517D7DB3A1B0/CustomProperties/=Extension/@EntryIndexedValue">txt</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EBE5AF63A3B44F4F940A517D7DB3A1B0/CustomProperties/=FileName/@EntryIndexedValue">NewFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EBE5AF63A3B44F4F940A517D7DB3A1B0/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EBE5AF63A3B44F4F940A517D7DB3A1B0/CustomProperties/=FileName/@EntryIndexedValue">TestValidator</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EBE5AF63A3B44F4F940A517D7DB3A1B0/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EBE5AF63A3B44F4F940A517D7DB3A1B0/Description/@EntryValue">Tests Validator</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EBE5AF63A3B44F4F940A517D7DB3A1B0/Field/=CLASSTESTS/@KeyIndexDefined">True</s:Boolean>
@@ -486,7 +488,7 @@ public class $CLASSTESTS$&#xD;
 	    // Arrange&#xD;
 		var fixture = new Fixture();&#xD;
         &#xD;
-		var request = Fixture.Create&lt;$YourQueryOrCommand$&gt;()&#xD;
+		var request = Fixture.Create&lt;$YourQueryOrCommand$&gt;();&#xD;
 &#xD;
         // Act&#xD;
         var result = await _validator.ValidateAsync(command);&#xD;
