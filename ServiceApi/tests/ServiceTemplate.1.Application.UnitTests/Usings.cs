@@ -4,3 +4,6 @@ global using AutoFixture.AutoMoq;
 global using Moq;
 global using Moq.Protected;
 global using FluentAssertions;
+global using FluentValidation.Validators;
+global using FluentValidation.Validators.UnitTestExtension.Composer;
+global using FluentValidation.Validators.UnitTestExtension.Core;
