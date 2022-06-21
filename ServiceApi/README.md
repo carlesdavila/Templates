@@ -1,3 +1,3 @@
 # Service Api Template
 
-TDB
+Template for creating Service Api following Clean Architecture. 
