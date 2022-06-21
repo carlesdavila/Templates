@@ -184,10 +184,7 @@ public class $CLASS$ : IRequestHandler&lt;$CLASSQUERY$, $YourReturnViewModel$&gt
 &#xD;
 namespace $NAMESPACE$;&#xD;
 &#xD;
-public class $CLASSQUERY$ : IRequest&lt;$YourReturnViewModel$&gt;&#xD;
-{        &#xD;
-&#xD;
-}&#xD;
+public record $CLASSQUERY$() : IRequest&lt;$YourReturnViewModel$&gt;;&#xD;
 </s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4AE4C72894C130478946834E5B005B47/@KeyIndexDefined">True</s:Boolean>
 	
@@ -365,10 +362,7 @@ public class $CLASSVALIDATOR$ : AbstractValidator&lt;$CLASSCOMMAND$&gt;&#xD;
 &#xD;
 namespace $NAMESPACE$;&#xD;
 &#xD;
-public class $CLASSCOMMAND$ : IRequest&#xD;
-{        &#xD;
-&#xD;
-}&#xD;
+public record $CLASSCOMMAND$() : IRequest;&#xD;
 </s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FF43A705C712244CB5A025D4A6E107BB/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FF43A705C712244CB5A025D4A6E107BB/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
