@@ -2,8 +2,6 @@
 
 ![Templates](logo.png)
 
-_[![NuGet version](https://img.shields.io/nuget/v/BullseyeBuild.Template)](https://www.nuget.org/packages/BullseyeBuild.Template)_
-
 Dotnet templates collection
 
 | Templates                                                                                                                  ||
