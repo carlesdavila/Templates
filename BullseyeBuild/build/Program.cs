@@ -33,7 +33,7 @@ Target(Targets.Pack, DependsOn(Targets.CleanArtifactsOutput, Targets.Build), asy
     await RunAsync("dotnet", $"pack -c Release -o {Directory.CreateDirectory(artifactsDir).FullName} --no-build --nologo");
 });
 
-Target(Targets.PublishArtifacts, DependsOn(Targets.GenerateArtifacts), () => Console.WriteLine("publish artifacts"));
+Target(Targets.PublishArtifacts, DependsOn(Targets.Pack), () => Console.WriteLine("publish artifacts"));
 
 Target("default", DependsOn(Targets.RunTests, Targets.PublishArtifacts));
 
