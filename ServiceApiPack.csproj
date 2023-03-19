@@ -37,6 +37,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="MinVer" Version="4.0.0" PrivateAssets="All" />
+        <PackageReference Include="MinVer" Version="4.3.0" PrivateAssets="All" />
     </ItemGroup>
 </Project>
